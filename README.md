@@ -4,7 +4,7 @@ Fork project of [Matthew Mulfinger](https://github.com/matthew1232/discord-webho
 Biggest changes are:
 
 Error returns on Discord provided length violations.
-The addField function now takes a Object Array like this [{'field1': 'First field', 'field2': 'Second Field', 'field3': true|false}] the function the uses the provided Array length to create the Fields.
+The addField function now takes a Object Array like this [{'field1': 'First field', 'field2': 'Second Field', 'field3': true|false}] the function then uses the provided Array length to create the Fields.
 
 ![version](https://img.shields.io/npm/v/discord-webhook-node "Version")
 ![npm](https://img.shields.io/npm/dt/discord-webhook-node.svg "Total Downloads")
@@ -23,7 +23,7 @@ The addField function now takes a Object Array like this [{'field1': 'First fiel
 - [License](#license)
 
 # Installation
-```npm install discord-webhook-node``` or ```yarn add discord-webhook-node```
+```npm install @bandaras213/discord-webhook-node``` or ```yarn add @bandaras213/discord-webhook-node```
 
 # Examples
 
