@@ -1,8 +1,13 @@
 # Discord Webhook sending
+Fork project of [Matthew Mulfinger](https://github.com/matthew1232/discord-webhook-node#readme)
+
+Biggest changes are:
+
+Error returns on Discord provided length violations.
+The addField function now takes a Object Array like this [{'field1': 'First field', 'field2': 'Second Field', 'field3': true|false}] the function the uses the provided Array length to create the Fields.
+
 ![version](https://img.shields.io/npm/v/discord-webhook-node "Version")
 ![npm](https://img.shields.io/npm/dt/discord-webhook-node.svg "Total Downloads")
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/matthew1232/discord-webhook-node.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/matthew1232/discord-webhook-node/alerts/)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/matthew1232/discord-webhook-node.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/matthew1232/discord-webhook-node/context:javascript)
 
 - [Installation](#installation)
 - [Examples](#examples)
@@ -38,13 +43,13 @@ hook.send("Hello there!");
 ```js
 const { Webhook, MessageBuilder } = require('discord-webhook-node');
 const hook = new Webhook("YOUR WEBHOOK URL");
+const fieldarr = [{'field1': 'First field', 'field2': 'Second Field', 'field3': true|false}, {'field1': 'First field', 'field2': 'Second Field', 'field3': true|false},{'field1': 'First field', 'field2': 'Second Field', 'field3': true|false}]
 
 const embed = new MessageBuilder()
 .setTitle('My title here')
 .setAuthor('Author here', 'https://cdn.discordapp.com/embed/avatars/0.png', 'https://www.google.com')
 .setURL('https://www.google.com')
-.addField('First field', 'this is inline', true)
-.addField('Second field', 'this is not inline')
+.addField(fieldarr)
 .setColor('#00b0f4')
 .setThumbnail('https://cdn.discordapp.com/embed/avatars/0.png')
 .setDescription('Oh look a description :)')
