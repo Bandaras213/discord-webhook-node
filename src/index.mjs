@@ -4,4 +4,7 @@ const Webhook = discord_webhook.Webhook;
 const MessageBuilder = discord_webhook.MessageBuilder;
 
 export default discord_webhook;
-export {Webhook, MessageBuilder};
+export {
+    Webhook,
+    MessageBuilder
+};

@@ -1,6 +1,6 @@
 {
   "name": "@bandaras213/discord-webhook-node",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Allows for easy webhook sending through discord's webhook API",
   "main": "./src/index.js",
   "exports": {

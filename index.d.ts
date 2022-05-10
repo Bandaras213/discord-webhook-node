@@ -12,27 +12,19 @@ export class Webhook {
   send(message: MessageBuilder | string): Promise<void>;
   info(
     title: string,
-    fieldName?: string,
-    fieldValue?: string,
-    inline?: boolean
+    fields: Array<Object>
   ): Promise<void>;
   success(
     title: string,
-    fieldName?: string,
-    fieldValue?: string,
-    inline?: boolean
+    fields: Array<Object>
   ): Promise<void>;
   warning(
     title: string,
-    fieldName?: string,
-    fieldValue?: string,
-    inline?: boolean
+    fields: Array<Object>
   ): Promise<void>;
   error(
     title: string,
-    fieldName?: string,
-    fieldValue?: string,
-    inline?: boolean
+    fields: Array<Object>
   ): Promise<void>;
 }
 
@@ -82,6 +74,6 @@ export class MessageBuilder {
   setTimestamp(): this;
   setColor(color: number): this;
   setDescription(description: string): this;
-  addField(fields: Array[]): this;
+  addField(fields: Array<Object>): this;
   setFooter(footer: string, footerImage?: string): this;
 }
