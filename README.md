@@ -6,8 +6,14 @@ Biggest changes are:
 Error returns on Discord provided length violations.
 The addField function now takes a Object Array like this [{'field1': 'First field', 'field2': 'Second Field', 'field3': true|false}] the function then uses the provided Array length to create the Fields.
 
-![version](https://img.shields.io/npm/v/discord-webhook-node "Version")
-![npm](https://img.shields.io/npm/dt/discord-webhook-node.svg "Total Downloads")
+[![GitHub license](https://img.shields.io/github/license/Bandaras213/discord-webhook-node)](https://github.com/Bandaras213/discord-webhook-node/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/Bandaras213/discord-webhook-node)](https://github.com/Bandaras213/discord-webhook-node/issues)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/bandaras213/discord-webhook-node)
+![npm](https://img.shields.io/npm/v/@bandaras213/discord-webhook-node)
+![GitHub repo size](https://img.shields.io/github/repo-size/bandaras213/discord-webhook-node)
+
+
+
 
 - [Installation](#installation)
 - [Examples](#examples)
