@@ -88,13 +88,15 @@ module.exports = class MessageBuilder {
         if (!(fieldarr.length <= 25 || fieldarr.length == 0)) throw new Error(`Fields Array must have at least 1 field and max 25 fields. Provided length: ${fieldarr.length}`);
 
         for (const field of fieldarr) {
+            if ((field[Object.keys(field)[0]].length == 0)) throw new Error(`${field[Object.keys(field)[0]]} length cant be 0.`);
+            if ((field[Object.keys(field)[1]].length == 0)) throw new Error(`${field[Object.keys(field)[1]]} length cant be 0.`);
             if (!(field[Object.keys(field)[0]].length <= 256)) throw new Error(`${field[Object.keys(field)[0]]} length is too long. Provided length: ${field[Object.keys(field)[0]].length} Max length: 256`);
             if (!(field[Object.keys(field)[1]].length <= 1024)) throw new Error(`${field[Object.keys(field)[1]]} length is too long. Provided length: ${field[Object.keys(field)[1]].length} Max length: 1024`);
 
             this.payload.embeds[0].fields.push({
                 name: field[Object.keys(field)[0]],
                 value: field[Object.keys(field)[1]],
-                inline: field[Object.keys(field)[3]]
+                inline: field[Object.keys(field)[2]]
             });
         }
 
